@@ -18,7 +18,9 @@ static const char *FILENAME = NULL;
 //
 void SerializerCloseFile( void )
 {
-  fclose( fp );
+	if (fp != NULL) {
+		fclose(fp);
+	}
   fp = NULL;
 }
 
